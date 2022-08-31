@@ -9,6 +9,6 @@ internal class StandardItemUpdater : IItemUpdater
 
     public void UpdateSellIn(Item item)
     {
-        // todo
+        item.SellIn--;
     }
 }

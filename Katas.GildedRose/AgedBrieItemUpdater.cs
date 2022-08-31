@@ -9,6 +9,6 @@ internal class AgedBrieItemUpdater : IItemUpdater
 
     public void UpdateSellIn(Item item)
     {
-        // todo
+        item.SellIn--;
     }
 }

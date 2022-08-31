@@ -44,11 +44,6 @@ public class GildedRose
                 }
             }
 
-            if (item.Name != "Sulfuras, Hand of Ragnaros")
-            {
-                item.SellIn = item.SellIn - 1;
-            }
-
             if (item.SellIn < 0)
             {
                 if (item.Name != "Aged Brie")
