@@ -4,7 +4,12 @@ internal class AgedBrieItemUpdater : IItemUpdater
 {
     public void UpdateQuality(Item item)
     {
-        // todo
+        GildedRose.IncrementQuality(item);
+
+        if (item.SellIn < 0)
+        {
+            GildedRose.IncrementQuality(item);
+        }
     }
 
     public void UpdateSellIn(Item item)
