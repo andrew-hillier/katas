@@ -16,15 +16,14 @@ public class GildedRose
         {
             var itemUpdater = itemUpdaterFactory.Create(item.Name);
 
-            itemUpdater.UpdateQuality(item);
             itemUpdater.UpdateSellIn(item);
+            itemUpdater.UpdateQuality(item);
+
+            if (item.Name == "Sulfuras, Hand of Ragnaros") continue;
 
             if (item.Name != "Aged Brie" && item.Name != "Backstage passes to a TAFKAL80ETC concert")
             {
-                if (item.Name != "Sulfuras, Hand of Ragnaros")
-                {
-                    DecrementQuality(item);
-                }
+                DecrementQuality(item);
             }
             else
             {
@@ -58,10 +57,7 @@ public class GildedRose
                     continue;
                 }
 
-                if (item.Name != "Sulfuras, Hand of Ragnaros")
-                {
-                    DecrementQuality(item);
-                }
+                DecrementQuality(item);
             }
         }
     }
