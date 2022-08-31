@@ -18,17 +18,6 @@ public class GildedRose
 
             itemUpdater.UpdateSellIn(item);
             itemUpdater.UpdateQuality(item);
-
-            if (item.Name == "Sulfuras, Hand of Ragnaros") continue;
-            if (item.Name == "Aged Brie") continue;
-            if (item.Name == "Backstage passes to a TAFKAL80ETC concert") continue;
-
-            DecrementQuality(item);
-
-            if (item.SellIn < 0)
-            {
-                DecrementQuality(item);
-            }
         }
     }
 
