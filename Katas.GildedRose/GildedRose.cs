@@ -10,8 +10,15 @@ public class GildedRose
 
     public void UpdateQuality()
     {
+        var itemUpdaterFactory = new ItemUpdaterFactory();
+
         foreach (Item item in Items)
         {
+            var itemUpdater = itemUpdaterFactory.Create(item.Name);
+
+            itemUpdater.UpdateQuality(item);
+            itemUpdater.UpdateSellIn(item);
+
             if (item.Name != "Aged Brie" && item.Name != "Backstage passes to a TAFKAL80ETC concert")
             {
                 if (item.Name != "Sulfuras, Hand of Ragnaros")
