@@ -14,6 +14,7 @@ public class GildedRoseTests
     [InlineData("Backstage passes to a TAFKAL80ETC concert", 20, 10, 22, 9)] // ...Quality increases by 2 when there are 10 days or less
     [InlineData("Backstage passes to a TAFKAL80ETC concert", 20, 5, 23, 4)] // ...and by 3 when there are 5 days or less
     [InlineData("Backstage passes to a TAFKAL80ETC concert", 20, 0, 0, -1)] // ...but Quality drops to 0 after the concert
+    [InlineData("Conjured Item", 10, 10, 8, 9)] // “Conjured” items degrade in Quality twice as fast as normal items
     public void UpdateQuality_Scenarios(string name, int initialQuality, int initialSellIn, int expectedQuality, int expectedSellIn)
     {
         // Arrange.

@@ -1,13 +1,15 @@
 namespace Katas.GildedRose;
 
-internal class StandardItemUpdater : IItemUpdater
+internal class ConjuredItemUpdater : IItemUpdater
 {
     public void UpdateQuality(Item item)
     {
         GildedRose.DecrementQuality(item);
+        GildedRose.DecrementQuality(item);
 
         if (item.SellIn < 0)
         {
+            GildedRose.DecrementQuality(item);
             GildedRose.DecrementQuality(item);
         }
     }

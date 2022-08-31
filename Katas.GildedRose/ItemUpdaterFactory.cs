@@ -12,9 +12,10 @@ internal class ItemUpdaterFactory
                 return new BackstagePassItemUpdater();
             case "Sulfuras, Hand of Ragnaros":
                 return new SulfurasItemUpdater();
+            case "Conjured Item":
+                return new ConjuredItemUpdater();
             default:
                 return new StandardItemUpdater();
-
         }
     }
 }
