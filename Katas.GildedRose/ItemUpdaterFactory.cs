@@ -2,7 +2,7 @@ namespace Katas.GildedRose;
 
 internal class ItemUpdaterFactory
 {
-    public IItemUpdater Create(string itemName)
+    public BaseItemUpdater Create(string itemName)
     {
         switch (itemName)
         {

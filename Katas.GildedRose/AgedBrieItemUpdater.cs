@@ -1,18 +1,18 @@
 namespace Katas.GildedRose;
 
-internal class AgedBrieItemUpdater : IItemUpdater
+internal class AgedBrieItemUpdater : BaseItemUpdater
 {
-    public void UpdateQuality(Item item)
+    public override void UpdateQuality(Item item)
     {
-        GildedRose.IncrementQuality(item);
+        IncrementQuality(item);
 
         if (item.SellIn < 0)
         {
-            GildedRose.IncrementQuality(item);
+            IncrementQuality(item);
         }
     }
 
-    public void UpdateSellIn(Item item)
+    public override void UpdateSellIn(Item item)
     {
         item.SellIn--;
     }

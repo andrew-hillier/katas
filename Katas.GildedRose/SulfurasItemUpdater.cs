@@ -1,13 +1,13 @@
 namespace Katas.GildedRose;
 
-internal class SulfurasItemUpdater : IItemUpdater
+internal class SulfurasItemUpdater : BaseItemUpdater
 {
-    public void UpdateQuality(Item item)
+    public override void UpdateQuality(Item item)
     {
         // do nothing
     }
 
-    public void UpdateSellIn(Item item)
+    public override void UpdateSellIn(Item item)
     {
         // do nothing
     }

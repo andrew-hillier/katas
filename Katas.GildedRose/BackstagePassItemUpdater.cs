@@ -1,19 +1,19 @@
 namespace Katas.GildedRose;
 
-internal class BackstagePassItemUpdater : IItemUpdater
+internal class BackstagePassItemUpdater : BaseItemUpdater
 {
-    public void UpdateQuality(Item item)
+    public override void UpdateQuality(Item item)
     {
-        GildedRose.IncrementQuality(item);
+        IncrementQuality(item);
 
         if (item.SellIn < 11)
         {
-            GildedRose.IncrementQuality(item);
+            IncrementQuality(item);
         }
 
         if (item.SellIn < 6)
         {
-            GildedRose.IncrementQuality(item);
+            IncrementQuality(item);
         }
 
         if (item.SellIn < 0)
@@ -22,7 +22,7 @@ internal class BackstagePassItemUpdater : IItemUpdater
         }
     }
 
-    public void UpdateSellIn(Item item)
+    public override void UpdateSellIn(Item item)
     {
         item.SellIn--;
     }

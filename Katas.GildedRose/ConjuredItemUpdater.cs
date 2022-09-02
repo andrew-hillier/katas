@@ -1,20 +1,20 @@
 namespace Katas.GildedRose;
 
-internal class ConjuredItemUpdater : IItemUpdater
+internal class ConjuredItemUpdater : BaseItemUpdater
 {
-    public void UpdateQuality(Item item)
+    public override void UpdateQuality(Item item)
     {
-        GildedRose.DecrementQuality(item);
-        GildedRose.DecrementQuality(item);
+        DecrementQuality(item);
+        DecrementQuality(item);
 
         if (item.SellIn < 0)
         {
-            GildedRose.DecrementQuality(item);
-            GildedRose.DecrementQuality(item);
+            DecrementQuality(item);
+            DecrementQuality(item);
         }
     }
 
-    public void UpdateSellIn(Item item)
+    public override void UpdateSellIn(Item item)
     {
         item.SellIn--;
     }

@@ -1,18 +1,18 @@
 namespace Katas.GildedRose;
 
-internal class StandardItemUpdater : IItemUpdater
+internal class StandardItemUpdater : BaseItemUpdater
 {
-    public void UpdateQuality(Item item)
+    public override void UpdateQuality(Item item)
     {
-        GildedRose.DecrementQuality(item);
+        DecrementQuality(item);
 
         if (item.SellIn < 0)
         {
-            GildedRose.DecrementQuality(item);
+            DecrementQuality(item);
         }
     }
 
-    public void UpdateSellIn(Item item)
+    public override void UpdateSellIn(Item item)
     {
         item.SellIn--;
     }

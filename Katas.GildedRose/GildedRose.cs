@@ -20,20 +20,4 @@ public class GildedRose
             itemUpdater.UpdateQuality(item);
         }
     }
-
-    internal static void IncrementQuality(Item item)
-    {
-        if (item.Quality < 50)
-        {
-            item.Quality = item.Quality + 1;
-        }
-    }
-
-    internal static void DecrementQuality(Item item)
-    {
-        if (item.Quality > 0)
-        {
-            item.Quality--;
-        }
-    }
 }
